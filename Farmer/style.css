@@ -1,0 +1,411 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('crop.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden; /* Avoid horizontal scrollbar */
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #e5c641;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Section with full-screen background image */
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('crop.png') no-repeat center center/cover;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* Orbiting Rings */
+.orbit-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.orbit-layer {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    animation: orbit 10s linear infinite;
+}
+
+.orbit-layer-1 {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+    border-image: conic-gradient(from 0deg, #f5a623, #f2c94c, #f5a623) 1;
+    animation-duration: 6s;
+}
+
+.orbit-layer-2 {
+    width: 90px;
+    height: 90px;
+    border-width: 2px;
+    border-image: conic-gradient(from 0deg, #f2994a, #f2a54c, #f2994a) 1;
+    animation-duration: 5s;
+}
+
+.orbit-layer-3 {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+    border-image: conic-gradient(from 0deg, #56ccf2, #2d9cdb, #56ccf2) 1;
+    animation-duration: 4s;
+}
+
+.orbit-layer-4 {
+    width: 70px;
+    height: 70px;
+    border-width: 2px;
+    border-image: conic-gradient(from 0deg, #bb6bd9, #9b51e0, #bb6bd9) 1;
+    animation-duration: 3s;
+}
+
+.orbit-layer-5 {
+    width: 60px;
+    height: 60px;
+    border-width: 2px;
+    border-image: conic-gradient(from 0deg, #27ae60, #219653, #27ae60) 1;
+    animation-duration: 2s;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Styling for the quote container */
+/* Styling for the quote container */
+.quote-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #e5c641;
+    margin-top: 70px; /* Adjust based on your navbar height */
+    overflow: hidden;
+    position: relative;
+    height: 80px; /* Adjust based on font size and padding */
+}
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.marquee blockquote {
+    display: inline-block;
+    padding-left: 100%;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    animation: marquee 30s linear infinite;
+}
+
+/* Keyframes for marquee effect */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Sliding Image Carousel */
+.container {
+    position: relative; /* Ensure relative positioning */
+    top: 0px; /* Adjust spacing from the quote container */
+    width: 100%; /* Full width for responsive design */
+    height: 500px; /* Adjust height based on image size */
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    border-radius: 5px ;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.slide {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items:end;
+}
+
+.container .slide .item {
+    width: 150px; /* Decrease width of the images */
+    height: 200px; /* Decrease height of the images */
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* Adjusting positions for images */
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+.slide .item:nth-child(4) {
+    left: calc(50% + 180px); /* Adjust spacing for new size */
+}
+.slide .item:nth-child(5) {
+    left: calc(50% + 360px); /* Adjust spacing for new size */
+}
+
+/* Adjust spacing for more items */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 540px); /* Adjust spacing for new size */
+    opacity: 0;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button {
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background: #ababab;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark background color */
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align to the right side */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+}
+.footer-left {
+    flex-basis: 50%;
+    color: #fffcfc;
+    text-align: left; /* Aligns text to the left */
+    padding-left: 0; /* Removes any padding on the left */
+    margin-left: 0; /* Ensures it is aligned to the left edge */
+}
+
+.footer-left h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #e5c641;
+    text-align: left; /* Ensures heading is left-aligned */
+}
+
+.footer-left p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: left; /* Ensures paragraph text is left-aligned */
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #e5c641;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #e5c641;
+}

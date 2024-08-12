@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp/Login</title>
+    <link rel="icon" href="C:\Users\nikhi\OneDrive\Desktop\KrishiLink\components\logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#signup">Sign Up</a></li>
+            <li class="tab"><a href="#login">Log In</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="signup" class="tab-pane active">
+                <h1>Sign Up for Free Now!</h1>
+                <form action="" method="post">
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label for="fname" value="fname" >First Name<span class="req">*</span></label>
+                            <input type="text" id="fname" required autocomplete="off" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="middle-name" value="mname">Middle Name</label>
+                            <input type="text" id="middle-name"/>
+                        </div>
+                        <div class="field-wrap">
+                            <label for="last-name" value="lname">Last Name<span class="req">*</span></label>
+                            <input type="text" id="last-name" required autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="dob" value="dob">Date of Birth<span class="req">*</span></label>
+                        <input type="date" id="dob" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">    
+                        <label for="gender" value="gender">Gender<span class="req">*</span></label>
+                        <select name="gender" id="gender">
+                            <option value="select">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="trans">Trans</option>
+                        </select>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="email" vlaue="email">Email Address</label>
+                        <input type="email" id="email">
+                        <label for="phone" value="number" placeholder="+91">Phone Number<span class="req">*</span></label>
+                        <input type="tel" id="phone">    
+                    </div>
+                    <div class="field-wrap">
+                        <label for="state" value="state">Select State<span class="req">*</span></label>
+                        <select name="state" id="state">
+                            <option value="">Select</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OD">Odisha</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="DL">Delhi</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="AS">Assam</option>
+                        </select>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="address" value="address">Address<span class="req">*</span></label>
+                        <input type="text" id="address">
+                        <label for="pincode" value="pincode">Area Pincode <span class="req">*</span></label>
+                        <input type="text" id="pincode">
+                    </div>
+                    <div class="upload-container">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <label for="fileUpload" class="upload-label" value="file-upload">Choose a valid Government Id: </label>
+                            <select name="id" id="gid">
+                                <option value="select">select</option>
+                                <option value="aadhar">Aadhar</option>
+                                <option value="pan">PAN Card</option>
+                                <option value="voter">Voter Id</option>
+                                <option value="ration">Ration Card</option>
+                                <option value="driving-license">Driving License</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <input type="text" class="idno" placeholder="Enter Government Id number"><br><br>
+                            <input type="file" id="fileUpload" name="fileUpload" class="upload-input">
+                            <button type="submit" class="upload-button">Upload</button>
+                        </form>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="password" value="password">Set a Password <span class="req">*</span></label>
+                        <input type="password" id="password" required autocomplete="off"/>
+                    </div>
+                    <button type="submit" class="button" value="submit">Get Started</button>
+                </form>
+            </div>
+            <div id="login" class="tab-pane">
+                <h1>Welcome Back</h1>
+                <form action="/" method="post">
+                    <div class="field-wrap">
+                        <label for="email-or-phone">Email Address or Phone number</label>
+                        <input type="text" id="email-or-phone" required>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="login-password">Password <span class="req">*</span></label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <p class="forget"><a href="#">Forget Password</a></p>
+                    <button class="button">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="engine.js"></script>
+</body>
+</html>

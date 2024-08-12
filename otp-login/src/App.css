@@ -1,0 +1,78 @@
+/* App.css */
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background gradient for the entire page */
+body {
+  background: linear-gradient(135deg, #fff9c4, #ffe082, #ffd54f, #ffeb3b);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Center the main content */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Style the heading */
+.App h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style for the OTP input fields */
+.otp-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otpInput {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.2em;
+
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focused state for inputs */
+.otpInput:focus {
+  border-color: #ffa500;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+  outline: none;
+}
+
+/* Style for the submit button */
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #e59400;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}

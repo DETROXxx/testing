@@ -1,0 +1,208 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f6;
+    margin: 0;
+    padding: 0;
+    /* Adding a subtle background gradient */
+    background: linear-gradient(135deg, #e5c641 0%, #ffffff 100%);
+}
+
+/* Form Container */
+.form {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Adding a subtle AI-inspired pattern overlay */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy/34Y54aYIId38fHk5rTxBzYTMuMFx4MTguMTcyPjxzY3JlZW4gd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIHN0cm9rZT0iIzAwMEZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIHN0cm9rZT0iIzAwMEZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIHN0cm9rZT0iIzAwMEZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIHN0cm9rZT0iIzAwMEZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk9IjAiIHN0cm9rZT0iIzAwMEZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHg9IjAiIHk')
+}
+
+/* Tab Group Styles */
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-group li {
+    margin: 0 10px;
+}
+
+.tab-group .tab {
+    display: inline-block;
+}
+
+.tab-group .tab a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #e5c641;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab-group .tab.active a {
+    background-color: #737373;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tab-content h1 {
+    text-align: center;
+    color: #737373;
+}
+
+/* Form Field Styles */
+.field-wrap {
+    margin-bottom: 20px;
+}
+
+.field-wrap label {
+    display: block;
+    margin-bottom: 5px;
+    color: #737373;
+}
+
+.field-wrap input,
+.field-wrap select {
+    width: calc(100% - 2px);
+    padding: 10px;
+    border: 1px solid #737373;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.field-wrap input:focus,
+.field-wrap select:focus {
+    border-color: #e5c641;
+    outline: none;
+}
+
+/* Button Styles */
+/* Button Styles */
+.button {
+    background-color: #e5c641;
+    color: #ffffff;
+    border: none;
+    padding: 15px 0; /* Increased padding for height */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Set a maximum width */
+    display: block; /* Block level element to center */
+    margin: 0 auto; /* Centering the button horizontally */
+    text-align: center; /* Center text inside the button */
+}
+
+.button:hover {
+    background-color: #737373;
+}
+
+
+/* Utility Styles */
+.top-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.top-row .field-wrap {
+    flex: 1;
+}
+/* Upload Container Styles */
+.upload-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+/* Upload Label Styles */
+.upload-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #737373;
+    font-weight: bold;
+}
+.idno {
+    width: calc(100% - 2px); /* Full width with padding compensation */
+    padding: 10px;
+    margin-top: 10px; /* Adding some space above the input field */
+    border: 1px solid #737373; /* Border color matching the theme */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 14px; /* Adjusting font size for readability */
+    color: #333; /* Text color */
+}
+
+.idno:focus {
+    border-color: #e5c641; /* Border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+/* Select Dropdown Styles */
+#gid {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #737373;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#gid:focus {
+    border-color: #e5c641;
+    outline: none;
+}
+
+/* File Input Styles */
+.upload-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #737373;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.upload-input:focus {
+    border-color: #e5c641;
+    outline: none;
+}
+
+/* Upload Button Styles */
+.upload-button {
+    background-color: #e5c641;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upload-button:hover {
+    background-color: #737373;
+}

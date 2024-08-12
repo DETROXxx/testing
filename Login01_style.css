@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e5c641 0%, #ffffff 100%);
+    text-align: center;
+}
+
+h1 {
+    color: #737373;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+/* Container for the images */
+div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Reduced gap between images */
+    max-width: 600px; /* Restricting the width to center the content */
+    margin: 20px auto; /* Centering the grid container */
+    padding: 10px;
+}
+
+/* Card Styles */
+div img {
+    width: 100%;
+    max-width: 250px; /* Adjusted image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+div img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image background container */
+div img[alt="Farmer"],
+div img[alt="Retailers"],
+div img[alt="Tranporter"],
+div img[alt="Storage"] {
+    background-color:  #635d5d33; /* Background color for the cards */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
